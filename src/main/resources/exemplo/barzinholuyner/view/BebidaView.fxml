@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="exemplo.barzinholuyner.controller.BebidaController"
+            prefHeight="550.0" prefWidth="750.0">
+
+    <VBox spacing="10.0" alignment="CENTER" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <Label text="Cadastro de Bebidas" style="-fx-font-size: 20px;"/>
+
+        <HBox spacing="10.0" alignment="CENTER">
+            <TextField fx:id="nomeField" promptText="Nome da Bebida" />
+            <TextField fx:id="tipoField" promptText="Tipo da Bebida" />
+            <TextField fx:id="volumeField" promptText="Volume" />
+            <TextField fx:id="precoField" promptText="Preço" />
+
+            <Button text="Adicionar Bebida" onAction="#adicionarBebida"/>
+        </HBox>
+
+        <TableView fx:id="tabelaBebidas">
+            <columns>
+                <TableColumn fx:id="idColuna" text="ID" />
+                <TableColumn fx:id="nomeColuna" text="Nome" />
+                <TableColumn fx:id="tipoColuna" text="Tipo" />
+                <TableColumn fx:id="volumeColuna" text="Volume" />
+                <TableColumn fx:id="precoColuna" text="Preço" />
+            </columns>
+        </TableView>
+
+        <HBox spacing="10.0" alignment="CENTER">
+            <Button text="Editar" onAction="#editarBebida"/>
+            <Button text="Excluir" onAction="#excluirBebida"/>
+        </HBox>
+    </VBox>
+
+</AnchorPane>
